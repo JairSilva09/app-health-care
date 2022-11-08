@@ -1,0 +1,20 @@
+
+.cont-lis-filter{
+        max-height: 300px;
+        height: 300px;
+        overflow: auto;
+    
+        mat-list{       
+            background-color: #F0F0F0;
+        }
+}
+
+.mat-list-base .mat-list-item{
+    font-size: 12px  
+}
+
+.mat-list-base .mat-list-item:hover{
+    color: #fa7601;
+    cursor: pointer;
+        
+}

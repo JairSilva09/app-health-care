@@ -1,0 +1,39 @@
+.main{
+  
+  .container-table{
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    // width: 100%;
+    .cont-search-box-table{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding-top: 25px;
+      width: 60%;
+
+      table {
+        width: 100%;
+        th{
+          background-color: #1d3d7c;
+          color: #fff;
+          vertical-align: middle;
+          font-size: 15px;
+        }
+      } 
+      .search-box{     
+        padding: 0 3px;
+
+      }    
+      
+    }
+    .filter-box{
+      width: 200px;
+      margin-right: 140px;
+      margin-top: 85px;     
+
+    }    
+  }
+ 
+}

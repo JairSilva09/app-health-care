@@ -1,0 +1,12 @@
+<div class="label-filter">
+    <p>First by:</p>
+    <p style="margin: 0" >Category <mat-icon style="vertical-align: middle">arrow_drop_down</mat-icon></p>
+</div>
+
+<div class="cont-lis-filter">
+    <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let category of categories">{{category.name}} - <span style="margin-left: 2px">{{category.number}}</span> </mat-list-item>
+    </mat-list>
+</div>
+
+  
