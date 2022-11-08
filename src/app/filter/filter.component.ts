@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -8,12 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FilterComponent implements OnInit {
 
   @Input() categories: any[]= [];
+  @Output() search = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.categories)
+  ngOnInit(): void { 
     
+  }
+
+  getDirectoryBySearch(search: string){
+        
+    this.search.emit(search)
+
   }
 
 }

@@ -5,7 +5,7 @@
 
 <div class="cont-lis-filter">
     <mat-list role="list">
-        <mat-list-item role="listitem" *ngFor="let category of categories">{{category.name}} - <span style="margin-left: 2px">{{category.number}}</span> </mat-list-item>
+        <mat-list-item (click)="getDirectoryBySearch(category.name)" role="listitem" *ngFor="let category of categories">{{category.name}} - <span style="margin-left: 2px">{{category.number}}</span> </mat-list-item>
     </mat-list>
 </div>
 

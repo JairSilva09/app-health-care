@@ -16,6 +16,9 @@ export class TabletComponent implements OnInit {
   DATA_CATEGORY: any[]= [];
   CATEGORIES: any[]= [];
 
+  orderSort: string = "none"
+  columnSort: string = ""; 
+
   constructor(private healthService: HealthCareService) { }
 
   ngOnInit(): void {
@@ -46,6 +49,46 @@ export class TabletComponent implements OnInit {
     }) 
 
     this.dataSource = this.data
+  }
+
+  searchBy(search: string){
+    this.healthService.getDirectoryBySearch(search).subscribe(
+      data => this.data = data,
+      error => console.log(error),
+    )
+    this.dataSource = this.data
+  }
+
+  orderBy(sort: string){
+   
+    if(this.columnSort != sort){
+      this.columnSort = sort;
+      this.orderSort = "asc";
+    }
+    if(this.orderSort == "none"){
+      this.orderSort = "asc";
+    }
+
+    if(this.orderSort == "asc"){
+      this.orderSort = "desc";
+    }
+
+    if(this.orderSort == "desc"){
+      this.orderSort = "asc";
+    }
+
+    let settingSort = {
+      "sortBy": sort,
+      "orderSort": this.orderSort
+    }
+
+    this.healthService.getDirectorySort(settingSort).subscribe(
+      data => this.data = data,
+      error => console.log(error),
+    )
+    
+    console.log(this.data)
+
   }
 
 }

@@ -33,7 +33,26 @@
       margin-right: 140px;
       margin-top: 85px;     
 
-    }    
+    }
+    th{
+      padding: 0;
+    }
+    .cont-th{
+      display: flex;  
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      cursor: pointer;
+    } 
+    // .cont-th:hover{
+    //   background-color: #fa7601;
+    // }
+    .icon-head-tablet{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    } 
+    
   }
  
 }
