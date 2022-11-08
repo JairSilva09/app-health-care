@@ -54,5 +54,38 @@
     } 
     
   }
+
+
+  .primary_header_2_wrapper {
+    border-bottom: 1px solid #eee;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_widget_section .widget {
+    margin-bottom: 0;
+}
+.custom_header_content{
+    display: flex;
+    justify-content: flex-end;
+}
+.header_widget_section .widget .widget-title{
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+
+.eb_menu_title{
+  color: grey;
+  text-decoration: none;
+}
+
+
+
+
  
 }
